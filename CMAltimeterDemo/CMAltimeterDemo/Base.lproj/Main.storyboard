@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ewe-9y-FSv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Altimeter Table View Controller-->
+        <scene sceneID="0r3-UW-8JV">
+            <objects>
+                <tableViewController id="ewe-9y-FSv" customClass="AltimeterTableViewController" customModule="CMAltimeterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FLb-jl-IOG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="fwB-6h-3Yg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="665" id="uwV-33-iSU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uwV-33-iSU" id="EYs-w6-wZx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pressureReadingLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-MN-ADd">
+                                                    <rect key="frame" x="-0.5" y="261" width="375" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Pressure:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgq-fW-iv7">
+                                                    <rect key="frame" x="-0.5" y="150" width="375" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vgq-fW-iv7" firstAttribute="width" secondItem="EYs-w6-wZx" secondAttribute="width" id="0XL-4Q-Hid"/>
+                                                <constraint firstItem="Vgq-fW-iv7" firstAttribute="centerX" secondItem="EYs-w6-wZx" secondAttribute="centerX" id="6Zl-Fs-dkV"/>
+                                                <constraint firstItem="0Hz-MN-ADd" firstAttribute="width" secondItem="EYs-w6-wZx" secondAttribute="width" id="ZdB-x4-NnS"/>
+                                                <constraint firstItem="0Hz-MN-ADd" firstAttribute="top" secondItem="Vgq-fW-iv7" secondAttribute="bottom" constant="75" id="eju-kj-r5d"/>
+                                                <constraint firstItem="Vgq-fW-iv7" firstAttribute="top" secondItem="EYs-w6-wZx" secondAttribute="top" constant="150" id="kXT-CI-N5N"/>
+                                                <constraint firstItem="0Hz-MN-ADd" firstAttribute="centerX" secondItem="EYs-w6-wZx" secondAttribute="centerX" id="nMJ-ex-Mzx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ewe-9y-FSv" id="wQ4-PB-wOE"/>
+                            <outlet property="delegate" destination="ewe-9y-FSv" id="2zh-W1-M73"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="pressureReadingLabel" destination="0Hz-MN-ADd" id="rAQ-6m-qO6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5t-ds-Fs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="107.49625187406298"/>
+        </scene>
+    </scenes>
+</document>
